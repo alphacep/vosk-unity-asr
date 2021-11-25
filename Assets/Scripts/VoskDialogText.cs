@@ -93,6 +93,8 @@ public class VoskDialogText : MonoBehaviour
 
     private void OnTranscriptionResult(string obj)
     {
+		// Save to file
+
         Debug.Log(obj);
         var result = new RecognitionResult(obj);
         foreach (RecognizedPhrase p in result.Phrases)
