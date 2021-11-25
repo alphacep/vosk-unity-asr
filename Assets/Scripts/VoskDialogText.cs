@@ -16,9 +16,9 @@ public class VoskDialogText : MonoBehaviour
 	Regex wolf_regex = new Regex(@"(волк|волка)");
 	Regex cabbage_regex = new Regex(@"(капуста|капусту|начнём с капусты)");
 
-	Regex goat_back_regex = new Regex(@"(козу назад|вернём козу)");
-	Regex wolf_back_regex = new Regex(@"(волка назад|вернём волка)");
-	Regex cabbage_back_regex = new Regex(@"(капусту назад|вернём капусту)");
+	Regex goat_back_regex = new Regex(@"(козу назад|вернём козу|верни козу)");
+	Regex wolf_back_regex = new Regex(@"(волка назад|вернём волка|верни волка)");
+	Regex cabbage_back_regex = new Regex(@"(капусту назад|вернём капусту|верни капусту)");
 
 	Regex forward_regex = new Regex("переедем");
 	Regex back_regex = new Regex("(назад|вернёмся назад)");
