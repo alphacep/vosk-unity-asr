@@ -148,6 +148,8 @@ public class VoskSpeechToText : MonoBehaviour
 
 		_isInitializing = false;
 		_didInit = true;
+
+		ToggleRecording();
 	}
 
 	//Translates the KeyPhraseses into a json array and appends the `[unk]` keyword at the end to tell vosk to filter other phrases.
