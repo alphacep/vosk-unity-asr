@@ -9,10 +9,12 @@ public class VoskDialogText : MonoBehaviour
 
 	Regex hi_regex = new Regex(@"привет");
 	Regex who_regex = new Regex(@"кто ты");
+	Regex pass_regex = new Regex("(хорошо|давай)");
+	Regex help_regex = new Regex("помоги");
+
 	Regex goat_regex = new Regex(@"(козу|начнём с козы)");
 	Regex wolf_regex = new Regex(@"(волк|волка)");
 	Regex cabbage_regex = new Regex(@"(капуста|капусту|начнём с капусты)");
-	Regex pass_regex = new Regex("(хорошо|давай)");
 
 	Regex goat_back_regex = new Regex(@"(козу назад|вернём козу)");
 	Regex wolf_back_regex = new Regex(@"(волка назад|вернём волка)");
@@ -110,7 +112,11 @@ public class VoskDialogText : MonoBehaviour
                 AddResponse("отлично");
 				return;
 			}
-
+			if (help_regex.IsMatch(p.Text))
+			{
+				AddResponse("думай сам");
+				return;
+			}
 			if (goat_back_regex.IsMatch(p.Text)) {
 				if (goat_left == true) {
 					AddResponse("коза ещё на левом берегу");
