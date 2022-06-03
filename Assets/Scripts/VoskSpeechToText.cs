@@ -225,6 +225,8 @@ public class VoskSpeechToText : MonoBehaviour
 		{
 			yield return null;
 		}
+		//Override path given in ZipFileOnExtractProgress to prevent crash
+		_decompressedModelPath = Path.Combine(Application.persistentDataPath, Path.GetFileNameWithoutExtension(ModelPath));
 
 		//Update status text
 		OnStatusUpdated?.Invoke("Decompressing complete!");
